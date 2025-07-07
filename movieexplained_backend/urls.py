@@ -29,6 +29,7 @@ urlpatterns = [
     
     # API endpoints
     path('api/v1/auth/', include('apps.authentication.urls')),
+    path('api/v1/', include('apps.movies.urls')),
     
     # API Documentation
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

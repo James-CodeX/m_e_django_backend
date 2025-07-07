@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     
     # Local apps
     'apps.authentication',
+    'apps.movies',
 ]
 
 MIDDLEWARE = [
@@ -236,3 +237,14 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
+
+# TMDB API Settings
+TMDB_API_KEY = os.getenv('TMDB_API_KEY')
+TMDB_ACCESS_TOKEN = os.getenv('TMDB_ACCESS_TOKEN')
+TMDB_BASE_URL = 'https://api.themoviedb.org/3'
+TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p'
+TMDB_IMAGE_SIZES = {
+    'poster': 'w500',
+    'backdrop': 'w1280',
+    'profile': 'w185'
+}
